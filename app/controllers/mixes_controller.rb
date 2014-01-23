@@ -45,7 +45,7 @@ class MixesController < ApplicationController
   def create
 
     @mix = Mix.new
-    if params[:url]
+    if params[:mix]
     @mix.url = params[:mix][:url]
      embedly(@mix.url)
     end    

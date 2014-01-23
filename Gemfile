@@ -48,3 +48,4 @@ end
 
 gem 'embedly'
 gem 'json'
+gem 'debugger', group: [:development, :test]

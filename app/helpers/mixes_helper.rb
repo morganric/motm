@@ -9,7 +9,7 @@ module MixesHelper
     obj = embedly_api.oembed :url => url
     @mix.image =  obj[0].thumbnail_url
     @mix.title = obj[0].title
-    @mix.author = obj[0].author
+    @mix.author = obj[0].author_name
 
   end
 

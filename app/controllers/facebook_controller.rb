@@ -1,7 +1,7 @@
 class FacebookController < ApplicationController
 
   def index
-    @mixes = Mix.all
+    @mixes = Mix.all.reverse
     @mix = Mix.new
 
     respond_to do |format|
