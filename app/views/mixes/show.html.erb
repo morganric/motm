@@ -1,0 +1,21 @@
+
+
+<h1>
+	<p class="pull-left">
+  <%= image_tag @mix.image, :width => "100px" %>
+</p>
+  <%= @mix.title %>
+  <b>by </b>
+  <small><%= @mix.author %></small>
+</h1>
+
+<br/>
+
+<section>
+  <%= link_to "#{@mix.url}", @mix.url %>
+</section>
+
+<br/>
+
+<%= link_to 'Edit', edit_mix_path(@mix) %> |
+<%= link_to 'Back', mixes_path %>

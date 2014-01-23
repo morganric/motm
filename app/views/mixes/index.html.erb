@@ -1,0 +1,28 @@
+
+
+
+<%#= link_to 'New Mix', new_mix_path %>
+
+<section class="mix-form well">
+<%= render 'mixes/form' %>
+</section>
+
+
+<br />
+
+<h1>Mixes of the Month</h1>
+
+<hr />
+
+<% @mixes.each do |mix| %>
+
+    <h2><%= link_to mix.title, mix  %> <br/> <small>via <%= mix.author %></small></h2>
+      <%= image_tag mix.image, :width => "100px" %>
+
+      <hr/>
+
+    <p>
+    <%= link_to 'Show', mix %> | <%= link_to 'Edit', edit_mix_path(mix) %> | <%= link_to 'Destroy', mix, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
+
