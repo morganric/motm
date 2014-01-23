@@ -6,7 +6,7 @@ Motm::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
-  root :to => "mixes#index"
+  root :to => "facebook#index"
   devise_for :users
   resources :users
 end

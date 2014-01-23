@@ -48,4 +48,3 @@ end
 
 gem 'embedly'
 gem 'json'
-gem "figaro"
