@@ -1,6 +1,9 @@
 class MixesController < ApplicationController
   include MixesHelper
 
+  load_and_authorize_resource
+  before_filter :check_mix_exists_already, :only => [:create]
+
   # GET /mixes
   # GET /mixes.json
   def index
@@ -85,8 +88,16 @@ class MixesController < ApplicationController
     @mix.destroy
 
     respond_to do |format|
-      format.html { redirect_to mixes_url }
+      format.html { redirect_to root_path }
       format.json { head :no_content }
     end
   end
+
+  private
+        def check_mix_exists_already
+            @mix = User.find(params[:mix])
+
+        end
+
+
 end

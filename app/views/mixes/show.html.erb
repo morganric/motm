@@ -17,5 +17,6 @@
 
 <br/>
 
-<%= link_to 'Edit', edit_mix_path(@mix) %> |
-<%= link_to 'Back', mixes_path %>
+<% if current_user && current_user.admin? %>
+<%= link_to 'Edit', edit_mix_path(@mix) %>
+<% end %>
