@@ -96,7 +96,6 @@ class MixesController < ApplicationController
   private
         def check_mix_exists_already
             @mix = User.find(params[:mix])
-
         end
 
 

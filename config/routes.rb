@@ -4,7 +4,7 @@ Motm::Application.routes.draw do
   match 'facebook' => 'facebook#index', :as => 'facebook'
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'facebook#index'
   end
   root :to => "facebook#index"
   devise_for :users
